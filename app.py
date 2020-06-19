@@ -40,7 +40,7 @@ def reply_msg(message):
             ls.pop(0)
            
             for name in chat_for:
-                 try:
+                try:
                     bot.send_message(name, ls[-1], message.message_id)
                 except Exception as e:
                     print("not member")

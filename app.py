@@ -41,12 +41,13 @@ def reply_msg(message):
 
             print("yeeeee")
             ls.pop(0)
-            try:
-                for name in chat_for:
+           
+            for name in chat_for:
+                 try:
                     bot.send_message(name, ls[-1], message.message_id)
-            except Exception as e:
-                print("not member")
-                pass
+                except Exception as e:
+                    print("not member")
+                    pass
             print(ls)
             ls.clear()
             print(ls)

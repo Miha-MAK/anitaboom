@@ -32,9 +32,6 @@ def reply_msg(message):
 
     print(ls)
 
-    bot.send_message(message.chat.id, text = """Таймер поставлен ⏳...сообщения будут отправляться в
-{}, теперь напишите текст поста""".format(ls[-1]))
-
     while True:
         if datetime.now(pytz.timezone("Europe/Moscow")).strftime("%Y-%m-%d %H:%M") in ls:
             tz = pytz.timezone('Asia/Yerevan')
